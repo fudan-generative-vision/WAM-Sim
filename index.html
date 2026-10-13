@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-media-base="https://cdn.aondata.work/WAM-Sim/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf1fc">
+  <meta name="description" content="WAM-Sim combines world anchored memory with online reinforcement learning for consistent and realistic driving video generation.">
+  <meta property="og:title" content="WAM-Sim | World Anchored Memory Meets Online RL">
+  <meta property="og:description" content="Consistent scenes. Persistent identities. Realistic driving simulation. Explore the WAM-Sim paper and video demonstrations.">
+  <meta property="og:type" content="website">
+  <title>WAM-Sim | Consistent and Realistic Driving Simulation</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/paper-theme.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="project-title">
+      <div class="hero-wall">
+        <video id="hero-video" src="https://cdn.aondata.work/WAM-Sim/assets/hero.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/hero.jpg" width="1920" height="1080" autoplay muted playsinline preload="auto" data-loop-start="9.4" aria-label="A wall of WAM-Sim generated driving videos across weather, roads, traffic, and lighting"></video>
+      </div>
+      <div class="hero-content wrap">
+        <p class="eyebrow">A driving world model</p>
+        <h1 id="project-title">WAM<span class="title-hyphen">-</span><em>Sim</em></h1>
+        <p class="paper-title">World Anchored Memory Meets Online RL<br class="desktop-break"> for Consistent and Realistic Driving Simulation</p>
+        <button class="authors-toggle" type="button" aria-expanded="false" aria-controls="author-list">Authors <span aria-hidden="true">+</span></button>
+        <div id="author-list" class="author-list" hidden><p><span>Jiahao Cui<sup>*</sup></span>, <span>Jiaye Li<sup>*</sup></span>, <span>Wenhao Zhang<sup>*</sup></span>, <span>Yaoyi Li<sup>*</sup></span>, <span>Shan Luan<sup>*</sup></span>, <span>Quanhui Tang</span>, <span>Jianhua Han</span>, <span>Lin Cheng</span>, <span>Hang Xu</span>, <span>Siyu Zhu<sup class="mail"><svg class="mail-icon" viewBox="0 0 16 12" aria-hidden="true"><rect x="1" y="1" width="14" height="10" rx="1.2"/><path d="M1.6 1.8 8 6.6l6.4-4.8"/></svg></sup></span></p><p class="author-notes"><sup>*</sup> Equal contribution <span class="sep"></span><svg class="mail-icon" viewBox="0 0 16 12" aria-hidden="true"><rect x="1" y="1" width="14" height="10" rx="1.2"/><path d="M1.6 1.8 8 6.6l6.4-4.8"/></svg> Corresponding author</p></div>
+        <p class="affiliations"><span>Fudan University</span><span>Yinwang Intelligent Technology Co., Ltd</span></p>
+        <div class="hero-actions">
+          <a class="button primary" href="#scene">Explore the demos</a>
+          <button class="button" type="button">Read the paper</button>
+        </div>
+      </div>
+      <button class="hero-toggle" type="button" aria-label="Pause preview">Pause preview</button>
+      <button class="film-button" type="button" aria-haspopup="dialog" aria-controls="film-dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M10 8.2v7.6l6-3.8z"/></svg>Watch the full video</button>
+    </section>
+
+    <section class="section wrap" id="scene" aria-labelledby="scene-title">
+      <div class="section-heading"><p class="eyebrow">World-anchored memory</p><h2 id="scene-title">Real-world scene consistency</h2><p>Generated scenes stay close to the real-world reference.</p></div>
+        <div id="scene-examples" class="example-stack" data-playback-group>
+          <figure id="scene-one" class="example-panel">
+            <div class="scene-comparison"><div class="comparison-labels three"><span>Real-world reference</span><span>Baseline</span><span class="ours-label">WAM-Sim</span></div>
+            <video class="demo-video wide-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/scene_memory_1.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/scene_memory_1.jpg" data-mobile-src="https://cdn.aondata.work/WAM-Sim/assets/mobile/scene-memory-1.mp4" data-mobile-poster="https://cdn.aondata.work/WAM-Sim/assets/mobile/scene-memory-1.jpg" width="3840" height="704" controls muted loop playsinline preload="none" aria-label="Scene memory comparison, example 1"></video></div>
+
+          </figure>
+          <figure id="scene-two" class="example-panel">
+            <div class="scene-comparison"><div class="comparison-labels three"><span>Real-world reference</span><span>Baseline</span><span class="ours-label">WAM-Sim</span></div>
+            <video class="demo-video wide-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/scene_memory_2.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/scene_memory_2.jpg" data-mobile-src="https://cdn.aondata.work/WAM-Sim/assets/mobile/scene-memory-2.mp4" data-mobile-poster="https://cdn.aondata.work/WAM-Sim/assets/mobile/scene-memory-2.jpg" width="3840" height="704" controls muted loop playsinline preload="none" aria-label="Scene memory comparison, example 2"></video></div>
+
+          </figure>
+        </div>
+    </section>
+
+    <section class="section wrap instance-block" id="identity" aria-labelledby="identity-title">
+      <div class="section-heading"><p class="eyebrow">World-anchored memory</p><h2 id="identity-title">Persistent object identity</h2><p>Vehicles keep a consistent appearance when they come back into view.</p></div>
+        <div id="instance-examples" class="example-stack" data-playback-group>
+          <div id="instance-two" class="example-panel sync-group">
+            <div class="video-grid two">
+              <figure><div class="comparison-labels"><span>Baseline</span></div><div class="annotated" data-annot="instance_memory_2_without"><video class="sync-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/instance_memory_2_without.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/instance_memory_2_without.jpg" width="1280" height="704" controls muted playsinline preload="none" aria-label="Tunnel traffic, baseline"></video><svg class="annot-layer" viewBox="0 0 1280 704" preserveAspectRatio="none" aria-hidden="true"></svg></div></figure>
+              <figure><div class="comparison-labels"><span class="ours-label">WAM-Sim</span></div><div class="annotated" data-annot="instance_memory_2_ours"><video class="sync-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/instance_memory_2_ours.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/instance_memory_2_ours.jpg" width="1280" height="704" controls muted playsinline preload="none" aria-label="Tunnel traffic with WAM-Sim"></video><svg class="annot-layer" viewBox="0 0 1280 704" preserveAspectRatio="none" aria-hidden="true"></svg></div></figure>
+            </div>
+            <div class="annot-caption" data-caption="instance-two" aria-live="off"><span class="cap-shared"></span><span class="cap-left"></span><span class="cap-right"></span></div>
+            <div class="sync-controls" hidden><button type="button" class="sync-play">Play comparison</button><button type="button" class="sync-restart" aria-label="Replay tunnel comparison">↺</button><input class="sync-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Tunnel comparison progress"><output class="sync-time">0:00 / 0:15</output></div>
+          </div>
+        </div>
+    </section>
+
+    <section class="section wrap" id="long-horizon" aria-labelledby="long-title">
+      <div class="section-heading"><p class="eyebrow">Minute-level generation</p><h2 id="long-title">Long-horizon generation</h2><p>Each clip is a continuous minute-level rollout.</p></div>
+      <div class="video-grid two lh-grid" data-playback-group>
+        <figure><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/long_horizon_3.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/long_horizon_3.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Long-horizon rollout: Urban traffic"></video></figure>
+        <figure><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/long_horizon_2.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/long_horizon_2.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Long-horizon rollout: City at night"></video></figure>
+        <figure><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/assets/videos/long_horizon_4.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/long_horizon_4.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Long-horizon rollout: Daylight road"></video></figure>
+        <figure><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/long_horizon_6.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/long_horizon_6.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Long-horizon rollout: Wet streets"></video></figure>
+      </div>
+    </section>
+
+    <section class="section wrap" id="traffic" aria-labelledby="traffic-title">
+      <div class="section-heading"><p class="eyebrow">Beyond consistency</p><h2 id="traffic-title">Realistic traffic participants</h2><p>Pedestrians, riders and vehicles with natural motion.</p></div>
+      <div class="video-grid two gallery-grid" data-playback-group>
+        <figure><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/assets/videos/traffic_visual_1.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/videos/traffic_visual_1.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Pedestrians and riders at a crossing"></video></figure>
+        <figure><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/complex_control_4.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/complex_control_4.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Scooters cutting across an intersection"></video></figure>
+      </div>
+    </section>
+
+    <section class="section wrap" id="generalization" aria-labelledby="generalization-title">
+      <div class="section-heading"><p class="eyebrow">Generalization</p><h2 id="generalization-title">Diverse environments and scenes</h2><p>Across weather, lighting, and road conditions.</p></div>
+      <h3 class="subsection-title">Diverse environments</h3>
+      <div class="video-grid two gallery-grid" data-playback-group>
+        <figure><div class="labeled"><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/complex_scenes_env_1.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/complex_scenes_env_1.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Rainy driving scene"></video><span class="video-chip" aria-hidden="true">Rain</span></div></figure>
+        <figure><div class="labeled"><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/complex_scenes_env_2.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/complex_scenes_env_2.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Snowy driving scene"></video><span class="video-chip" aria-hidden="true">Snow</span></div></figure>
+        <figure><div class="labeled"><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/complex_scenes_env_3.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/complex_scenes_env_3.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Foggy driving scene"></video><span class="video-chip" aria-hidden="true">Fog</span></div></figure>
+        <figure><div class="labeled"><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/complex_scenes_env_4.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/complex_scenes_env_4.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Night driving scene"></video><span class="video-chip" aria-hidden="true">Night</span></div></figure>
+      </div>
+      <h3 class="subsection-title">Diverse scenes</h3>
+      <div class="video-grid two gallery-grid" data-playback-group>
+        <figure><div class="labeled"><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/assets/videos/complex_scenes_road_2_16s.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/complex_scenes_road_2.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Parking garage driving scene"></video><span class="video-chip" aria-hidden="true">Parking garage</span></div></figure>
+        <figure><div class="labeled"><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/assets/videos/complex_scenes_road_3_12s.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/complex_scenes_road_3.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Countryside driving scene"></video><span class="video-chip" aria-hidden="true">Countryside</span></div></figure>
+        <figure><div class="labeled"><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/assets/videos/complex_scenes_road_4_13s.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/complex_scenes_road_4.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="City streets at night"></video><span class="video-chip" aria-hidden="true">City streets</span></div></figure>
+        <figure><div class="labeled"><video class="demo-video" src="https://cdn.aondata.work/WAM-Sim/video_materials/complex_control_2.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/posters/complex_control_2.jpg" width="1280" height="704" controls muted loop playsinline preload="none" aria-label="Busy intersection at night"></video><span class="video-chip" aria-hidden="true">Busy intersection</span></div></figure>
+      </div>
+    </section>
+
+    <section class="section wrap results-section" id="results" aria-labelledby="results-title">
+      <div class="section-heading"><h2 id="results-title">Quantitative results</h2></div>
+      <h3 class="subsection-title">nuScenes</h3>
+      <div class="table-scroll"><table>
+        <thead>
+          <tr class="group-row"><th scope="col" rowspan="2">Method</th><th scope="col" rowspan="2">Synthesis Resolution</th><th scope="colgroup" colspan="2"><span class="grp">Fidelity</span></th><th scope="colgroup" colspan="2"><span class="grp">3D Detection</span></th><th scope="colgroup" colspan="2"><span class="grp">BEV Seg mIoU</span></th></tr>
+          <tr><th scope="col">FVD ↓</th><th scope="col">FID ↓</th><th scope="col">mAP ↑</th><th scope="col">NDS ↑</th><th scope="col">Road ↑</th><th scope="col">Vehicle ↑</th></tr>
+        </thead>
+        <tbody>
+          <tr class="reference-row"><th scope="row">Ori nuScenes</th><td>900 × 1600</td><td>-</td><td>-</td><td>35.54</td><td>41.21</td><td>73.66</td><td>34.82</td></tr>
+          <tr class="section-row"><th scope="rowgroup" colspan="8">(I) Image Generation Methods</th></tr>
+          <tr><th scope="row">BEVControl</th><td>224 × 400</td><td>-</td><td>24.85</td><td>-</td><td>-</td><td>60.80</td><td>26.80</td></tr>
+          <tr><th scope="row">PerLDiff</th><td>256 × 384</td><td>-</td><td>13.36</td><td>15.24</td><td>24.05</td><td>61.26</td><td>27.13</td></tr>
+          <tr><th scope="row">DrivePTS</th><td>224 × 480</td><td>-</td><td>11.45</td><td>15.37</td><td>25.49</td><td>63.95</td><td>27.82</td></tr>
+          <tr><th scope="row">MagicDrive</th><td>224 × 400</td><td>-</td><td>16.20</td><td>12.30</td><td>23.32</td><td>61.05</td><td>27.01</td></tr>
+          <tr class="section-row"><th scope="rowgroup" colspan="8">(II) Video Generation Methods</th></tr>
+          <tr><th scope="row">DriveDreamer</th><td>256 × 448</td><td>452.0</td><td>26.80</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+          <tr><th scope="row">DriveDreamer-2</th><td>256 × 448</td><td>105.10</td><td>25.00</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+          <tr><th scope="row">DrivingDiffusion</th><td>512 × 512</td><td>332.0</td><td>15.83</td><td>-</td><td class="best">33.10</td><td>63.20</td><td>31.60</td></tr>
+          <tr><th scope="row">Panacea</th><td>256 × 512</td><td>139.0</td><td>16.96</td><td>11.58</td><td>22.31</td><td>55.78</td><td>22.74</td></tr>
+          <tr><th scope="row">DreamForge</th><td>224 × 400</td><td>224.8</td><td>14.61</td><td>13.01</td><td>22.16</td><td>65.27</td><td>28.36</td></tr>
+          <tr><th scope="row">MagicDrive-V2</th><td>848 × 1600</td><td>94.84</td><td>20.91</td><td>17.65</td><td>-</td><td>59.79</td><td class="best">32.73</td></tr>
+          <tr class="ours-row"><th scope="row">Ours</th><td>704 × 1280</td><td class="best">42.01</td><td class="best">7.07</td><td class="best">19.67</td><td>29.95</td><td class="best">68.08</td><td>31.53</td></tr>
+        </tbody>
+      </table></div>
+      <h3 class="subsection-title">Self-Collected Dataset</h3>
+      <div class="table-scroll"><table>
+        <thead>
+          <tr class="group-row"><th scope="col" rowspan="2">Method</th><th scope="colgroup" colspan="2"><span class="grp">Visual Fidelity</span></th><th scope="colgroup" colspan="3"><span class="grp">VBench Metrics</span></th><th scope="colgroup" colspan="2"><span class="grp">Persistence</span></th><th scope="colgroup" colspan="2"><span class="grp">Object &amp; Physics</span></th></tr>
+          <tr><th scope="col">FID ↓</th><th scope="col">FVD ↓</th><th scope="col">Quality ↑</th><th scope="col">Subject ↑</th><th scope="col">Background ↑</th><th scope="col">Sub. Coh. ↑</th><th scope="col">Scene Sim. ↑</th><th scope="col">Sub. Fid. ↑</th><th scope="col">Phys. Plaus. ↑</th></tr>
+        </thead>
+        <tbody>
+          <tr class="section-row"><th scope="rowgroup" colspan="10">(I) Inference Only</th></tr>
+          <tr><th scope="row">UniMLVG</th><td>44.21</td><td>753.16</td><td>75.75</td><td>83.43</td><td>89.77</td><td>0.591</td><td>0.708</td><td>39.19</td><td>46.57</td></tr>
+          <tr><th scope="row">OpenDWM</th><td>37.69</td><td>535.42</td><td>76.54</td><td>82.36</td><td>90.11</td><td>0.532</td><td>0.731</td><td>37.24</td><td>47.44</td></tr>
+          <tr><th scope="row">HorizonDrive</th><td>24.86</td><td>218.51</td><td>78.41</td><td>84.55</td><td>88.09</td><td>0.553</td><td>0.804</td><td>42.98</td><td>51.19</td></tr>
+          <tr class="section-row"><th scope="rowgroup" colspan="10">(II) SFT on Self-Collected Data</th></tr>
+          <tr><th scope="row">OmniDreams</th><td>11.58</td><td>81.64</td><td>77.63</td><td>86.17</td><td>92.35</td><td>0.646</td><td>0.863</td><td>37.64</td><td>47.99</td></tr>
+          <tr class="ours-row"><th scope="row">Ours</th><td class="best">10.95</td><td class="best">74.20</td><td class="best">78.71</td><td class="best">86.98</td><td class="best">92.54</td><td class="best">0.681</td><td class="best">0.910</td><td class="best">44.00</td><td class="best">55.96</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section wrap method-section" id="method" aria-labelledby="method-title">
+      <div class="section-heading"><h2 id="method-title">Method</h2><p>Persistent world memory meets online reinforcement learning.</p></div>
+      <div class="memory-types"><div><span>Structure</span><h3>Persistent geometry</h3><p>Pose-aligned HD-map tokens anchor the road layout.</p></div><div><span>Scene</span><h3>Read-only appearance</h3><p>Geolocated background tokens supply consistent scene context.</p></div><div><span>Instance</span><h3>Write-once identity</h3><p>Track-keyed tokens preserve individual traffic participants.</p></div></div>
+      <figure class="method-figure"><a href="https://cdn.aondata.work/WAM-Sim/assets/figures/world-memory.png" target="_blank" rel="noopener" aria-label="Open full-resolution world anchored memory architecture"><img src="https://cdn.aondata.work/WAM-Sim/assets/figures/world-memory.png" width="1584" height="856" loading="lazy" alt="World anchored memory architecture: structural, scene, and instance visual tokens pass through hierarchical persistence and injection into a causal video diffusion transformer."></a></figure>
+      <h3 class="subsection-title method-subtitle">Drive DiffusionNFT</h3>
+      <p class="method-text">Self-generated candidate rollouts receive rewards for scene quality, object quality, and physical plausibility. Group-wise reward normalization and flow-matching policy optimization refine the generator while the persistent memory anchors the world.</p>
+      <figure class="method-figure"><a href="https://cdn.aondata.work/WAM-Sim/assets/figures/drive-diffusion-nft.png" target="_blank" rel="noopener" aria-label="Open full-resolution Drive DiffusionNFT pipeline"><img src="https://cdn.aondata.work/WAM-Sim/assets/figures/drive-diffusion-nft.png" width="1584" height="648" loading="lazy" alt="Drive DiffusionNFT pipeline: driving data curation, multi-reward evaluation, and online NFT policy optimization."></a></figure>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><a class="wordmark" href="#top">WAM-Sim</a><p>World Anchored Memory Meets Online RL<br><span>Consistent and realistic driving simulation</span></p><button class="text-link" type="button">Read the paper</button></footer>
+  <dialog id="film-dialog" class="film-dialog" aria-label="WAM-Sim overview video">
+    <div class="film-frame">
+      <button class="film-close" type="button" aria-label="Close the video">×</button>
+      <video id="film-video" src="https://cdn.aondata.work/WAM-Sim/assets/videos/wam-sim-overview.mp4" poster="https://cdn.aondata.work/WAM-Sim/assets/videos/wam-sim-overview.jpg" width="1920" height="1080" controls playsinline preload="none"></video>
+    </div>
+  </dialog>
+  <div id="media-status" class="sr-only" role="status" aria-live="polite"></div>
+  <noscript><style>.hero-toggle{display:none}</style></noscript>
+</body>
+</html>
