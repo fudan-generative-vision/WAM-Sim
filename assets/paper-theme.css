@@ -285,3 +285,9 @@ button.button,button.text-link{font:inherit;color:inherit;cursor:default}
 .js .hero:not(.hero-ready) .scroll-hint{opacity:0;visibility:hidden}
 @media(max-width:760px){.scroll-hint{font-size:12px;bottom:56px}}
 .scroll-hint{font-size:14px;color:#56627d;bottom:26px}
+/* Keep the title block exactly where it sat before the author button was removed
+   (that button and its margin took 42px of the centred block). */
+.hero-content{padding-bottom:calc(85px + 42px)}
+.scroll-hint{bottom:10px;gap:0;font-size:14px;color:#4f5b76}
+.scroll-hint svg{width:24px;height:24px;stroke-width:2;color:#4f5b76}
+@media(max-width:760px){.hero-content{padding-bottom:calc(70px + 42px)}.scroll-hint{bottom:48px}}
