@@ -244,22 +244,10 @@
     sync();
   });
 
-  // Author list under the affiliations, collapsed by default.
-  const authorsToggle = document.querySelector('.authors-toggle');
-  if (authorsToggle) {
-    const list = document.querySelector('#author-list');
-    authorsToggle.addEventListener('click', () => {
-      const open = list.hidden;
-      list.hidden = !open;
-      authorsToggle.setAttribute('aria-expanded', String(open));
-      authorsToggle.querySelector('span').textContent = open ? '−' : '+';
-    });
-  }
-
   // Full overview video in a dialog, always played from the beginning.
   const film = document.querySelector('#film-dialog');
   const filmVideo = document.querySelector('#film-video');
-  const filmButton = document.querySelector('.film-button');
+  const filmButton = document.querySelector('.film-open');
   function filmOpen() { return Boolean(film && film.open); }
   if (film && filmButton) {
     filmButton.addEventListener('click', () => {
